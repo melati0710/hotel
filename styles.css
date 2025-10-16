@@ -1,0 +1,46 @@
+/* Theme */
+:root{
+  --bg1:#3b82f6;
+  --bg2:#8b5cf6;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+  background: radial-gradient(1200px 800px at 20% 10%, #4f46e5 0%, transparent 60%),
+              linear-gradient(135deg,var(--bg1),var(--bg2));
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+}
+main#app{ width: 980px; max-width: 94vw; }
+.card{ background:#fff; border-radius:24px; box-shadow: 0 15px 45px rgba(16,24,40,.12); padding:28px; }
+h1{ margin:0 0 10px; font-size:44px; letter-spacing:.2px; }
+.section-title{ font-size:36px; font-weight:800; margin:0 0 12px; }
+label{ color:#374151; font-size:16px; margin-bottom:6px; display:block; }
+input, select{ width:100%; border:1px solid var(--border); background:#fff; border-radius:12px; padding:14px; font-size:16px; }
+.row{ display:flex; gap:18px; width:100%; }
+.col{ flex:1; }
+.btn{ border:0; border-radius:14px; padding:16px 18px; font-weight:700; color:#fff; cursor:pointer; font-size:18px;
+  background: linear-gradient(90deg, var(--bg1), var(--bg2)); box-shadow: 0 8px 18px rgba(59,130,246,.35); }
+.btn.secondary{ background:#fff; color:#111; border:1px solid var(--border); box-shadow:none }
+.btn.danger{ background:var(--danger) }
+.btn.gray{ background:#6b7280 }
+.btn-block{ display:block; width:100% }
+.mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-20{margin-top:20px}
+.center{text-align:center}
+.list{ padding:28px; background:#fff; border-radius:24px; box-shadow:0 10px 30px rgba(0,0,0,.1) }
+.card-item{ background:#fff; border-radius:20px; border:1px solid var(--border);
+  padding:16px 18px; display:flex; justify-content:space-between; align-items:center;
+  box-shadow:0 4px 10px rgba(0,0,0,.05); }
+.card-item + .card-item{ margin-top:16px }
+.hotel-icon{ font-size:38px; margin-right:12px }
+.item-left{ display:flex; align-items:center; gap:12px }
+.item-title{ font-size:22px; font-weight:800 }
+.item-sub{ color:var(--muted) }
+.header-pad{ padding-top:6px }
+hr.sep{ border:0; border-top:1px solid #eef2f7; margin:22px 0 }
+.actions{ display:flex; gap:10px }
+@media (max-width:720px){ .row{flex-direction:column} .actions{flex-direction:column} }
